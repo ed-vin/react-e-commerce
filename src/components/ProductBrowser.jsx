@@ -1,9 +1,9 @@
 import '../styles/ProductBrowser.css';
 
 const products = [
-  { id: 1, name: 'SuperPlugin', price: 199 },
-  { id: 2, name: 'MegaPlugin', price: 299 },
-  { id: 3, name: 'UltraPlugin', price: 149 },
+  { id: 1, name: 'compressor', price: 199, image: './images/compressor.png' },
+  { id: 2, name: 'reverb', price: 299, image: '/images/reverb.png' },
+  { id: 3, name: 'distortion', price: 149, image: '/images/distortion.png' },
 ];
 
 export default function ProductBrowser() {
@@ -13,12 +13,18 @@ export default function ProductBrowser() {
       <div className="product-grid">
         {products.map(product => (
           <div className="product-card" key={product.id}>
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="product-image"
+            />
             <h3>{product.name}</h3>
             <p>{product.price} kr</p>
-            <button>Köp</button>
+            <button>Buy</button>
           </div>
         ))}
       </div>
     </section>
   );
 }
+
