@@ -1,22 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import ProductCard from './components/ProductCard';
 
 function App() {
+
+  // import from './components/ProductCard.jsx'
+  const plugins = [
+    { id: 1, name: 'SuperPlugin', price: 199 },
+    { id: 2, name: 'MegaPlugin', price: 299 }
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <main style={{ padding: '2rem' }}>
+      <h1>Pluginshoppen</h1>
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        {plugins.map(plugin => (
+          <ProductCard key={plugin.id} name={plugin.name} price={plugin.price} />
+        ))}
+      </div>
+    </main>
       </header>
     </div>
   );
