@@ -39,8 +39,8 @@
   }
   
   .product-card button:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #fff700;
+    color: #000000;
   }
   
   .product-card img {
@@ -56,3 +56,30 @@
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
+
+  /* Category filter */
+
+  .category-filter {
+    margin-bottom: 1rem;
+  }
+  
+  .category-filter button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #1c1c1c;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #ffffff;
+  }
+  
+  .category-filter button.active {
+    background-color: #fff700;
+    color: rgb(0, 0, 0);
+  }
+
+  .category-filter button:hover {
+    background-color: #fff700;
+    color: rgb(0, 0, 0);
+  }
+  
