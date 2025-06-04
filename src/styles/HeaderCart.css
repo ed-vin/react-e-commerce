@@ -1,0 +1,26 @@
+/* src/styles/HeaderCart.css */
+
+.header-cart-button {
+    background: none;
+    border: none;
+    color: #fff700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .header-cart-button:hover {
+    color: #fff;
+  }
+  
+  .cart--dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 250px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    z-index: 1000;
+  }
+  

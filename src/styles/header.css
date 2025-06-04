@@ -1,27 +1,65 @@
 .header {
-    background-color: #0c0c0c;
-    color: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header h1 {
-    margin: 0;
+  padding: 1rem 2rem;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-between; /* keeps left and right apart */
+  align-items: center;            /* vertically center both */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  color: #ffffff;
+  user-select: none;
+}
+
+.header h1 {
+  margin: 0;
+  color: #fff700;
+  font-weight: 700;
+  font-size: 1.8rem;
+  flex-grow: 1;                   /* take remaining space */
+  text-align: left;               /* keep text left aligned */
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;      /* push nav links to the right */
+  flex-shrink: 0;                 /* prevent shrinking */
+  min-width: 200px;               /* optional: keep some minimum nav width */
+}
+
+.header nav a {
+  padding: 0.5rem 1rem;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.header nav a:hover,
+.header nav a:focus {
+  background-color: #fff700;
+  color: #000000;
+  outline: none;
+}
+
+.header nav a.active {
+  background-color: #fff700;
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .header nav {
-    display: flex;
-    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    min-width: auto;
   }
-  
-  .header nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .header nav a:hover {
-    text-decoration: underline;
-  }
-  
+}
