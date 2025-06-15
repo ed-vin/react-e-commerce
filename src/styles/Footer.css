@@ -1,0 +1,94 @@
+/* Footer.css */
+.footer {
+    padding: 1.5rem 2rem;
+    background-color: #1e1e1e; /* Dark background, similar to header */
+    color: #ffffff;
+    user-select: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    max-width: 1200px; /* Max width to keep content contained */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  .footer-section h1 {
+    margin: 0;
+    color: #fff700; /* Yellow highlight for site name */
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .footer-section p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7); /* Slightly muted text */
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0; /* Add some margin for wrapping */
+  }
+  
+  .footer-nav a {
+    padding: 0.5rem 1rem;
+    background-color: #1c1c1c; /* Similar button background */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .footer-nav a:hover,
+  .footer-nav a:focus {
+    background-color: #fff700; /* Yellow on hover */
+    color: #000000;
+    outline: none;
+  }
+  
+  .footer-section.social {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-section.social a {
+    color: #ffffff;
+    font-size: 1.5rem; /* Larger icons */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section.social a:hover,
+  .footer-section.social a:focus {
+    color: #fff700; /* Yellow on hover for icons */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section.copyright {
+      margin-bottom: 1rem;
+    }
+  
+    .footer-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+  
+    .footer-section.social {
+      margin-top: 1rem;
+    }
+  }
