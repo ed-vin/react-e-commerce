@@ -11,7 +11,4 @@ A React-based web application that serves as a plugin store for audio plugins. B
 ## Technologies
 - React
 - React Router
-- CSS Modules / Styled Components (adjust as needed)
-
-## License
-MIT License
+- CSS

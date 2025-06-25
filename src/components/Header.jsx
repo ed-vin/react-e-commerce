@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/header.css';
 import HeaderCart from '../components/HeaderCart';
 
@@ -6,9 +7,9 @@ export default function Header() {
     <header className="header" style={{ position: 'relative' }}>
       <h1>Plugin Store</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
+        <Link to="/">Home</Link>       {/* Använd Link to="..." */}
+        <Link to="/products">Products</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       <HeaderCart />
