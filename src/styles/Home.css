@@ -15,3 +15,60 @@
     line-height: 1.6;
   }
   
+/* Home.css */
+
+.hero-section {
+  position: relative; /* Viktigt för att placera text eller overlay */
+  width: 100%;
+  height: 400px; /* Justera höjden efter önskemål, t.ex. 50vh för 50% av viewport-höjden */
+  overflow: hidden; /* Se till att bilden inte sticker ut */
+  margin-bottom: 40px; /* Mer utrymme under hero-sektionen */
+  display: flex; /* Använd flexbox för att centrera innehåll om du lägger till det */
+  align-items: center; /* Centrera vertikalt */
+  justify-content: center; /* Centrera horisontellt */
+  color: white; /* Textfärg om du lägger till text ovanpå bilden */
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se till att bilden täcker hela ytan utan att bli förvrängd */
+  object-position: center; /* Centrera bilden i rutan */
+  filter: brightness(0.5); /* Gör bilden lite mörkare för bättre kontrast mot text */
+}
+
+/* Exempel på hur du kan lägga till en text-overlay om du vill */
+.hero-content {
+  position: absolute;
+  z-index: 1; /* Se till att texten ligger ovanpå bilden */
+  max-width: 800px; /* Begränsa bredden på texten */
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.3); /* Lätt genomskinlig bakgrund för texten */
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 3em; /* Större rubrik */
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em; /* Större brödtext */
+}
+
+/* Media queries för responsivitet */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 300px; /* Mindre höjd på mindre skärmar */
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+}
